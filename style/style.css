@@ -1,0 +1,343 @@
+@import url("reset.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@100;300;400;500;700&display=swap');
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    padding: 4rem 1.5rem;
+    height: auto;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(100, 100, 100, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    z-index: var(--z-fixed);
+    transition: .2s;
+}
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    transition: .3s;
+}
+
+.navbar ul li a {
+    color: white;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+
+.navbar ul li:hover {
+    border-radius: 1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 50px rgba(255, 255, 255, 1);
+}
+
+
+/* Hero */
+
+.hero {
+    background-color: aliceblue;
+    background-image: url(../img/heroBGImage_width530.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100dvw;
+    height: 100dvh;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    color: white;
+}
+
+.hero p {
+    font-family: 'Great Vibes', italic;
+    position: relative;
+    color: white;
+    font-size: 2rem;
+    margin-top: 5rem;
+    text-align: center;
+}
+
+.about {
+    background-color: rgb(245, 245, 245);
+}
+
+.about_description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 3rem;
+
+    margin-top: 2rem;
+}
+
+.about p {
+    /* text-align: center; */
+    font-size: 1.5rem;
+}
+
+.tutorial {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: #cacfd1;
+}
+
+.tutorial p {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.tutorial img {
+    width: 100%;
+}
+
+.tutorial_img_desktop {
+    display: none;
+}
+
+.tutorial_description {
+    font-size: 1.25rem;
+    margin: 1rem 0;
+}
+
+.tutorial_description li {
+    margin: 1rem 0;
+}
+
+.tutorial_description span {
+    font-weight: 500;
+}
+
+.buy_it p {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+}
+
+.format_bar {
+
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #cacfd1;
+    border-radius: 2rem;
+    padding: .5rem 0;
+
+    margin-top: 3rem;
+}
+
+
+.covers_grid {
+    margin-top: 1rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+.cover {
+    display: flex;
+
+    /* border-bottom: 1px solid #cacfd1; */
+    border-bottom-left-radius: 1.5rem;
+    /* border-top: 1px solid #cacfd1; */
+    border-top-left-radius: 1.5rem;
+
+    background: linear-gradient(to right, #cacfd1, white);
+}
+
+.cover_img {
+    width: 50%;
+}
+
+.cover_img img {
+    border-radius: 1.5rem;
+}
+
+.cover ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 1rem;
+    align-items: stretch;
+    width: 50%;
+}
+
+.cover ul li {
+    text-align: center;
+}
+
+.cover ul li a {
+    color: black;
+    display: inline-block;
+    width: 100%;
+    padding: .25rem .75rem;
+    border-radius: 1rem;
+    background-color: #cacfd1;
+
+    /* text-transform: uppercase; */
+    font-size: 1.25rem;
+    transition: .2s;
+}
+
+.cover ul li a:hover {
+    background-color: #8b8b8b;
+}
+
+footer {
+    margin-bottom: 2rem;
+}
+
+/* Media Queries */
+
+/* SMARTPHONES LANDSCAPE */
+@media only screen and (min-width: 480px) {
+    .hero {
+        background-image: url(../img/heroBGImage_width768.jpg);
+    }
+
+    .cover ul {
+        margin-left: 2rem;
+    }
+
+    .cover ul li a {
+        padding: .5rem 1.25rem;
+    }
+}
+
+/* TABLETS PORTRAIT */
+@media only screen and (min-width: 768px) {
+    .hero {
+        background-image: url(../img/heroBGImage_width1024.jpg);
+    }
+
+    .hero h1 {
+        margin-left: 3rem;
+    }
+}
+
+
+/* TABLET LANDSCAPE / DESKTOP */
+@media only screen and (min-width: 1024px) {
+    h2 {
+        font-size: 3rem;
+    }
+
+    .navbar ul {
+        justify-content: space-evenly;
+    }
+
+    .hero {
+        background-image: url(../img/heroBGImage_width1920.jpg);
+        max-width: 100%;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero div {
+        display: flex;
+        flex-direction: column;
+        width: 60%;
+        /* justify-content: center; */
+    }
+
+    .hero h1 {
+        padding-top: 5rem;
+        font-size: 5rem;
+    }
+
+    .hero p {
+        font-size: 3rem;
+        margin-left: 3rem;
+        padding-top: 5rem;
+        text-align: left;
+    }
+
+    .about {
+        background-color: white;
+        padding: 10rem 1.5rem;
+    }
+
+    .about h2 {
+        margin-bottom: 5rem;
+    }
+
+    .tutorial {
+        padding: 10rem 1.5rem;
+        border-radius: 5rem;
+    }
+
+    .tutorial h2 {
+        margin-left: 4rem;
+    }
+
+    .tutorial p {
+        margin-top: 5rem;
+        margin-left: 4rem;
+    }
+
+    .tutorial_img_mobile {
+        display: none;
+    }
+
+    .tutorial_img_desktop {
+        display: block;
+    }
+
+    .tutorial ul {
+        margin-left: 4rem;
+    }
+
+    .buy_it p {
+        margin-top: 5rem;
+    }
+
+    .covers_grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+    }
+}
+
+@media only screen and (min-width: 1920px) {
+    .hero {
+        background-image: url(../img/heroBGImage_width2560.jpg);
+    }
+}
